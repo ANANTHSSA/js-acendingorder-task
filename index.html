@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ascending order</title>
+</head>
+<body>
+    <input type="number"id='num1'>
+    <input type="text"id='num2'>
+    <input type="text"id='num3'>
+    <button onclick="largeNum()">click</button>
+    <div class="result"> 
+    
+    </div>    
+<script>
+       let inp1=document.getElementById('num1');
+        let inp2=document.getElementById('num2');
+        let inp3=document.getElementById('num3');
+        let result=document.querySelector('.result');
+        function largeNum(){
+            if(inp1.value > inp2.value && inp1.value > inp3.value){
+                if(inp2.value > inp3.value){
+                    result.innerHTML=`${inp3.value},${inp2.value},${inp1.value}`;
+                }
+                else{
+                    result.innerHTML=`${inp2.value},${inp3.value},${inp1.value}`;
+                }
+            }
+            else if(inp2.value > inp1.value && inp2.value > inp3.value){
+                 if(inp1.value > inp3.value){
+                    result.innerHTML=`${inp3.value},${inp1.value},${inp2.value}`;
+                }
+                else{
+                    result.innerHTML=`${inp1.value},${inp3.value},${inp2.value}`;
+                }
+            }
+            else{
+              if(inp2.value > inp1.value){
+                result.innerHTML=`${inp1.value},${inp2.value},${inp3.value}`; 
+             }   
+             else{
+                result.innerHTML=`${inp2.value},${inp1.value},${inp3.value}`;
+             }
+            }    
+        } 
+</script>
+</body>
+</html>
